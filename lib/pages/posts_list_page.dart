@@ -25,8 +25,11 @@ class PostsListPage extends StatelessWidget {
           itemBuilder: (context, index) {
             Post post = controller.postList[index];
             return Card(
-              child: Center(
-                child: Text('${post.title}'),
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('${post.title}'),
+                ),
               ),
             );
           },
